@@ -1,0 +1,16 @@
+
+
+Creating WEB API Project
+
+dotnet new                                                          --For creating new Solution files, Projects
+dotnet new sln <name?>                                              --Creates a solution file with name <name>, if no name provided the name of the containing folder will be used
+dotnet new webapi -o <name of output directory>                     --Creates a webapi project with folder name of <name of output directory>
+dotnet sln add <name>                                               --Adds project in directory folder <name> to the solution
+
+dotnet tool list -g                                                 --Lists tools installed at -g (global) level
+dotnet tool install --global <tool> --version <version>
+dotnet tool update --global <tool> --version <version>
+
+dotnet add reference <path/to/reference/folder/>                     --Adds to project in current directory a reference to .csproj in /folder/
+
+dotnet restore                                                       --In solution folder call this to register new references
