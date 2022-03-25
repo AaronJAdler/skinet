@@ -1,0 +1,10 @@
+
+
+
+
+Commands
+
+dotnet ef database drop -p <project with context> -s <startup project>                                                  --Drops the database associated with the context and project provided
+
+dotnet ef migrations remove -p <project with context> -s <startup project>                                              --Removes migrations
+dotnet ef migrations add <name of migration> -p <project with context> -s <startup project> -o <output directory>       --Adds migration to output directory

@@ -1,0 +1,89 @@
+Intro
+
+Applicaiton Architecture
+The Repository Pattern
+Extending the Product Entity
+Related data
+Seeding Data  
+Migrations and Startup
+
+APP Architecture
+    API:>               Infastructure, Core
+        Controllers
+    
+    Infastructure:>     Core, Stripe
+        Repository 
+        DbContext
+        Services
+
+    Core:>-
+        Entities
+        Interfaces
+
+    Stripe
+
+The Repository Pattern - Goals
+    Decouple Business code from data access code    (DbContext decouples database access layer)
+    Separation of Concerns
+        from controllers and DbContext
+    Minimise Duplicate Query Logic
+    Testability
+
+The Repository Pattern - Consequences
+    Increased level of abstraction  (abstraction can be good, but too much is not)
+    Increased maintainability, Flexibility, Testability
+    More classes/interfaces - less duplicate code
+    Business logic further away from the data
+    Harder to optimise certain operations against the data source
+
+The Repository Pattern
+    IRepository is injected into controller, controller sees whats available to use - controller more lightweight
+
+
+
+
+
+
+Generic Repository and Specification Pattern
+
+    Intro
+        Creating a generic Repository   
+            Single repository that can be used by all Entities
+        Specification Pattern
+            Not all data access requests are same, sometimes you want filtering or pagination
+            The Specification pattern helps get around this
+        Using the Specification pattern
+        Using the Debugger
+        Shaping data
+        AutoMapper
+        Serving Static Content from API
+
+    About Generics
+        Been around since C# 2.0 (2002)
+        Help avoid duplicate code
+        Type safety
+        Mostly used rather than created
+
+
+Specification pattern
+    Some Complaints about Generic Repository - Anti-pattern implementations
+        Having a method accept a generic query creates a leaky method, where it can do anything (too generic!)
+        Method names become meaningless, the name doesnt tell you what it does
+        Creating many specific queries makes the generic repository pointless
+    Getting around it
+        Derive from generic repository to create more specific repositories
+        
+    Specification pattern
+        Describes a query in an object
+        Returns an IQueryable<T>
+        Generic List method takes specification as parameter
+        Specification can have meaningful name
+            ex. ProductsWithTypesAndBrandsSpecification
+
+    Ex
+        Specification = I need all products with 'red' in the name and include th eproduct types and brands
+        IQueryable<T> -> ListAsync(Specification)
+    
+
+    IQueryable
+        List of expressions to query the database against

@@ -1,0 +1,14 @@
+IServiceCollection 
+    .addTransient()
+        Transient lifetime services are created each time they are requested. This lifetime works best for lightweight, stateless services.
+        -Instantiated within each method call.
+
+    .addSingleton()
+        Singleton lifetime services are created the first time they are requested (or when ConfigureServices is run if you specify an instance there) 
+        and then every subsequent request will use the same instance.
+        -Until app shuts down.
+
+    .addScoped<Interface, Instance>()
+        Scoped lifetime services are created once per request.
+
+
