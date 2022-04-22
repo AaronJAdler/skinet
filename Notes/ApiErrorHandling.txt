@@ -1,0 +1,20 @@
+Section 5
+
+    Error handling and exceptions
+    Developer exception page
+    Validation errors
+    Http response errors
+    Customising the error handling
+    Middleware
+    Swagger
+
+Http Response Codes
+    Range - Type
+    200 - Ok
+    300 - Redirection
+    400 - Client error
+    500 - Server error
+
+500 Internal Server Error gives
+    Error message from exception itself
+    Line of code responsible for generating the exception

@@ -1,0 +1,20 @@
+Summary
+
+    Creating a generic repository
+    Specification Pattern
+    Using the Specification Pattern
+    Using the Debugger
+    Shaping Data
+    AutoMapper
+    Serving static content from API
+
+FAQs
+
+    Q: Isn't AutoMapper going to affect performance?
+    A: Possibly. Every app is different. Test!
+
+    Q: How do I use ThenInclude? The spec pattern only allows us to go one level deep.
+    A: Not needed for this app. Please see attached PDF for how to do this.
+
+Next..
+    Error handling on API
