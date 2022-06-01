@@ -1,0 +1,26 @@
+Promises vs Observables
+
+    Promises
+-Have one pipeline
+-Typically used with async data return
+-Not easy to cancel
+
+    Observables
+-Are cancellable
+-Stream data in multiple pipelines
+-Array like operations
+-Can be created from other sources like events
+-They can be subscribed to
+
+Observables are better for pagination because you can get a continuous subscription stream to receive paginated data.
+
+    HTTP, Observables and RxJS
+1. HTTP Get request from ShopService
+2. Receive the Observable and cast it into a Products Array
+3. Subscribe to the Observable from teh component
+4. Assign the Products array to a local variable for use in the components template
+
+    RxJS
+-Reactive extensions for Javascript
+-Utility library for working with observables, similar to lodash or underscore for javascript objects and arrays.
+-Uses the pipe() method to chain RxJS operators together

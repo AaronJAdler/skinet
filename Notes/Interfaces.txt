@@ -1,0 +1,4 @@
+    TIP
+From the swagger document, you can copy the 'Example Value' Schema and use:
+    http://json2ts.com/
+to convert from JSON to a TS Interface

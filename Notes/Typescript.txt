@@ -1,0 +1,19 @@
+Pros vs Cons of Typescript
+
+    Pros
+-Strong Typing
+-Object Oriented
+-Better Intellisense
+-Access Modifiers (on dev side, Javascript doesnt have access modifiers)
+-Future Javascript features (decorators)
+-Catches silly mistakes in development
+-3rd Party Librarys
+-Easy to learn if you know JS (is a superset of JS)
+
+    Cons
+-More upfront code (specifying types.. etc)
+-Strict mode is... strict! (typings for everything)
+
+
+
+
