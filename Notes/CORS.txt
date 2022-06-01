@@ -1,0 +1,6 @@
+Cross Origin Resource Sharing
+    -Browsers restrict HTTP requests from JS
+    -Need to send CORS header
+
+In Startup
+    services.AddCors

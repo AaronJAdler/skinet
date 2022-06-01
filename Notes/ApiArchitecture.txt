@@ -81,7 +81,7 @@ Specification pattern
             ex. ProductsWithTypesAndBrandsSpecification
 
     Ex
-        Specification = I need all products with 'red' in the name and include th eproduct types and brands
+        Specification = I need all products with 'red' in the name and include the product types and brands
         IQueryable<T> -> ListAsync(Specification)
     
 

@@ -1,5 +1,9 @@
+#SLN
 obj
 bin
 appsettings.json
 *.db
 StudentAssets/
+
+#Angular
+node-modules/

@@ -1,0 +1,14 @@
+
+Performance
+
+
+Paging
+
+    Deferred Execution
+-Query commands are stored in a variable
+-Execution of the query is deferred
+-IQueryable<T> creates an expression tree
+-Execution:
+    -ToList(), ToArray(), ToDictionary()
+    -Count() or any other singleton queries
+

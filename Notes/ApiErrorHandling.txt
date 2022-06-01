@@ -18,3 +18,5 @@ Http Response Codes
 500 Internal Server Error gives
     Error message from exception itself
     Line of code responsible for generating the exception
+
+
