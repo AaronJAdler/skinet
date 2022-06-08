@@ -1,0 +1,8 @@
+
+App Module
+    Core Module (Singletons: NavBar)
+
+    Shared Module (Shared Components: Anything that is used in more than 1 feature module)
+
+    Feature Modules (App Features: Each feature we create will have its own module and routing)
+        -shop

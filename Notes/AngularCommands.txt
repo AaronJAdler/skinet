@@ -1,0 +1,17 @@
+
+
+
+
+    modules
+ng g m <name> - (g)enerates a (m)odule with <name>
+
+    Components
+ng g c <name> - (g)enerates a (c)omponent with <name>
+
+    Services
+ng g s <name> - (g)enerates a (s)ervice with <name>
+
+        General
+    Options
+    --flat                      (doesnt make a folder to hold generated item)
+    --skip-tests                (does not create spec files)

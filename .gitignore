@@ -7,3 +7,5 @@ StudentAssets/
 
 #Angular
 node-modules/
+.vscode/
+.angular/

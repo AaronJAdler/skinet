@@ -1,0 +1,9 @@
+<h5 class="text-warning me-3">{{Title}}</h5>
+            <ul class="list-group my-3">
+                <li class="list-group-item" 
+                *ngFor="let option of Options"
+                [class.active]="option.id === optionId"
+                [value]="option.id"
+                (click)="onOptionSelected(option.id)"
+                >{{option.name}}</li>
+            </ul>
