@@ -6,6 +6,7 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { PagingHeaderComponent } from './components/pagination/paging-header/paging-header.component';
 import { PagerComponent } from './components/pagination/pager/pager.component';
 import { FilterButtonListComponent } from './components/filter-button-list/filter-button-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -19,14 +20,16 @@ import { FilterButtonListComponent } from './components/filter-button-list/filte
   imports: [
     CommonModule,
     FormsModule,
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    FontAwesomeModule
   ],
   exports: [
     DropdownSelectorComponent,
     PaginationModule,
     PagingHeaderComponent,
     PagerComponent,
-    FilterButtonListComponent
+    FilterButtonListComponent,
+    FontAwesomeModule
   ]
 })
 export class SharedModule { }

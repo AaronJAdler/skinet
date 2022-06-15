@@ -7,9 +7,9 @@
             [(selectedOption)]="shopParams.sort" (onChange)="getProducts()"
             ></app-dropdown-selector>
 
-            <app-filter-button-list (onSelect)="getProducts(true)" [Title]="'Brands'" [Options]="brands" [(optionId)]="shopParams.brandId"></app-filter-button-list>
+            <app-filter-button-list *ngIf="brands" (onSelect)="getProducts(true)" [Title]="'Brands'" [Options]="brands" [(optionId)]="shopParams.brandId"></app-filter-button-list>
 
-            <app-filter-button-list (onSelect)="getProducts(true)" [Title]="'Types'" [Options]="productTypes" [(optionId)]="shopParams.productTypeId"></app-filter-button-list>
+            <app-filter-button-list *ngIf="productTypes" (onSelect)="getProducts(true)" [Title]="'Types'" [Options]="productTypes" [(optionId)]="shopParams.productTypeId"></app-filter-button-list>
             
         </section>
 
