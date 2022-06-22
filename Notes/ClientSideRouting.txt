@@ -1,0 +1,16 @@
+In This Module
+    -Adding new feature modules
+    -Setting up routes
+    -Nav Links
+    -Lazy Loading
+
+Routing
+    -SPA's need routers
+    -Angular router will load a component when route is activated
+    -<RouterOutlet> is replaced by the router with what is specified in the route
+    -Module architecture of our app encourages lazy loading
+
+Lazy Loading
+    In component-routing.module use RouterModule.forChild(routes) *instead of forRoot
+    then export RouterModule,
+    then in component.module, import ComponentRoutingModule instead of RouterModules

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faCircleMinus, faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import { IProduct } from 'src/app/shared/models/product';
 import { ShopService } from '../shop.service';
 
@@ -11,7 +11,9 @@ import { ShopService } from '../shop.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product!: IProduct;
-  faCartShopping = faCartShopping;
+  productQuantity = 1;
+  faCirclePlus = faCirclePlus;
+  faCircleMinus = faCircleMinus;
 
   constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute) {}
 
@@ -28,6 +30,20 @@ export class ProductDetailsComponent implements OnInit {
         },
         error: err => console.error('loadProduct got an error: ' + err)
       });
+    }
+  }
+
+  onQuantityChange(sign: string)
+  {
+    switch (sign) {
+      case "+":
+        this.productQuantity ++;
+        break;
+      case "-":
+        if(this.productQuantity > 1) this.productQuantity --;
+        break;
+      default:
+        break;
     }
   }
 
