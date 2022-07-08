@@ -1,0 +1,12 @@
+In This Module
+    Error handling in Angular
+    Http interceptors
+    Adding toast notifications
+    Troubleshooting tips
+
+Goal: 
+    Handle errors we receive from API centrally and handled by th ehttp interceptors
+    Understand how to troubleshoot API errors
+
+Http Interceptor:
+    Use angular HttpInterceptor to handle API errors

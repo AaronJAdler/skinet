@@ -14,3 +14,5 @@ Lazy Loading
     In component-routing.module use RouterModule.forChild(routes) *instead of forRoot
     then export RouterModule,
     then in component.module, import ComponentRoutingModule instead of RouterModules
+
+    This causes the code required for a component to be loaded only once the route has been activated.
