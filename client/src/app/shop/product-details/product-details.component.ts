@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { faCircleMinus, faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import { IProduct } from 'src/app/shared/models/product';
+import { BreadcrumbService } from 'xng-breadcrumb';
 import { ShopService } from '../shop.service';
 
 @Component({
@@ -15,7 +16,9 @@ export class ProductDetailsComponent implements OnInit {
   faCirclePlus = faCirclePlus;
   faCircleMinus = faCircleMinus;
 
-  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute) {}
+  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute, private breadcrumbService: BreadcrumbService) {
+    this.breadcrumbService.set('@productDetails', ' ');
+  }
 
   ngOnInit(): void {
     this.loadProduct();
@@ -27,6 +30,7 @@ export class ProductDetailsComponent implements OnInit {
       this.shopService.getProduct(id).subscribe({
         next: product => {
           this.product = product;
+          this.breadcrumbService.set('@productDetails', product.name)
         },
         error: err => console.error('loadProduct got an error: ' + err)
       });

@@ -7,6 +7,7 @@ import { PagingHeaderComponent } from './components/pagination/paging-header/pag
 import { PagerComponent } from './components/pagination/pager/pager.component';
 import { FilterButtonListComponent } from './components/filter-button-list/filter-button-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 
@@ -21,7 +22,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     FormsModule,
     PaginationModule.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    CarouselModule.forRoot()
   ],
   exports: [
     DropdownSelectorComponent,
@@ -29,7 +31,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PagingHeaderComponent,
     PagerComponent,
     FilterButtonListComponent,
-    FontAwesomeModule
+    FontAwesomeModule,
+    CarouselModule
   ]
 })
 export class SharedModule { }

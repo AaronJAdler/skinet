@@ -2,7 +2,7 @@
     <div class="row">
 
         <section class="col-3">
-            <h5 class="text-warning me-3">Sort</h5>
+            <h5 class="text-warning me-3 mt-4 mb-3">Sort</h5>
             <app-dropdown-selector [Options]="sortOptions" 
             [(selectedOption)]="shopParams.sort" (onChange)="getProducts()"
             ></app-dropdown-selector>
@@ -21,9 +21,9 @@
                 [totalCount]="totalCount"
                     ></app-paging-header>
                 
-                <div class="form-inline mt-2">
+                <div class="d-flex form-inline mt-2">
 
-                    <input #search (keyup.enter)="onSearch()" type="text" class="form-control mr-2" style="width: 300px" placeholder="Search">
+                    <input #search (keyup.enter)="onSearch()" type="text" class="form-control me-2 my-2" style="width: 300px" placeholder="Search">
 
                     <button (click)="onSearch()" class="btn btn-outline-primary my-2">Search</button>
                     <button (click)="onReset()" class="btn btn-outline-success ms-2 my-2">Reset</button>
