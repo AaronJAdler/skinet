@@ -4,6 +4,7 @@ using API.Middleware;
 using AutoMapper;
 using Infastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using StackExchange.Redis;
 
 // Startup.cs not needed in Net6
 
@@ -26,6 +27,12 @@ namespace API
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
             services.AddDbContext<StoreContext>(x => x.UseSqlite(_configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddSingleton<IConnectionMultiplexer>(config => {
+                var configuration = ConfigurationOptions.Parse(
+                    _configuration.GetConnectionString("Redis"), true);
+                return ConnectionMultiplexer.Connect(configuration);
+            });
 
             services.AddApplicationServices();
             services.AddSwaggerDocumentation();
